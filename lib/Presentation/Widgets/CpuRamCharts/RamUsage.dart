@@ -24,11 +24,12 @@ class _RamusageState extends State<Ramusage> {
   }
 
   _getdata() async {
-    ramdata = await Cpuramusage().getRAMusage();
+    ramdata = await Cpuramusage().getRAMusage(); // data in string
 
     setState(() {
       RAMpercent = double.parse(ramdata);
-      indicatorval = RAMpercent.round() / 100;
+      indicatorval = RAMpercent.round() /
+          100; //dividing with 100 because it takes val from 0.1 to 1
     });
     Future.delayed(const Duration(seconds: 1), () => _getdata());
   }
@@ -55,7 +56,8 @@ class _RamusageState extends State<Ramusage> {
       radius: ScreenSize.width * 0.08,
       lineWidth: ScreenSize.width * 0.015,
       circularStrokeCap: CircularStrokeCap.round,
-      percent: indicatorval,
+      percent:
+          indicatorval, //dividing with 100 because it takes val from 0.1 to 1
       progressColor: const Color(0xff147AD6),
       backgroundColor: const Color(0xff7388A9),
     );

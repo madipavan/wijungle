@@ -4,6 +4,8 @@ import 'package:window_manager/window_manager.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  //for closing and minimizing window
   await windowManager.ensureInitialized();
 
   runApp(const MyApp());

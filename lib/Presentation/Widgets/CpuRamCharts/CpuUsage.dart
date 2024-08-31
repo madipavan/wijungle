@@ -24,10 +24,10 @@ class _CpuusageState extends State<Cpuusage> {
   }
 
   _getdata() async {
-    cpudata = await Cpuramusage().getCPUusage();
+    cpudata = await Cpuramusage().getCPUusage(); //data in string
 
     setState(() {
-      CPUpercent = double.parse(cpudata);
+      CPUpercent = double.parse(cpudata); //converting it into double
     });
     Future.delayed(const Duration(seconds: 1), () => _getdata());
   }
@@ -40,7 +40,7 @@ class _CpuusageState extends State<Cpuusage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "${CPUpercent.round().toString()}%",
+            "${CPUpercent.round().toString()}%", //roundoff val
             style: TextStyle(
                 fontSize: ScreenSize.width * 0.02, fontWeight: FontWeight.bold),
           ),
@@ -54,7 +54,8 @@ class _CpuusageState extends State<Cpuusage> {
       radius: ScreenSize.width * 0.08,
       lineWidth: ScreenSize.width * 0.015,
       circularStrokeCap: CircularStrokeCap.round,
-      percent: CPUpercent / 100,
+      percent: CPUpercent /
+          100, //dividing with 100 because it takes val from 0.1 to 1
       progressColor: const Color(0xff147AD6),
       backgroundColor: const Color(0xff7388A9),
     );

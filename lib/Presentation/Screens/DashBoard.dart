@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wijungle/Core/ColorPallete.dart';
 import 'package:wijungle/Core/ScreenSize.dart';
-import 'package:wijungle/Presentation/Screens/Widgets/drawer_column.dart';
-import 'package:wijungle/Presentation/Screens/Widgets/homedrawer_column.dart';
+import 'package:wijungle/Presentation/Widgets/drawer_column.dart';
+import 'package:wijungle/Presentation/Widgets/homedrawer_column.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -31,11 +31,12 @@ class _DashboardState extends State<Dashboard> {
                   bottomRight: Radius.circular(50),
                   topRight: Radius.circular(50)),
             ),
-            child: const DrawerColumn(),
+            child:
+                const DrawerColumn(), //custom widget returns column for gradient blue container
           ),
           SizedBox(
             width: ScreenSize.width * 0.7775,
-            child: const HomedrawerColumn(),
+            child: const HomedrawerColumn(), //custom widget returns column
           ),
         ],
       ),
