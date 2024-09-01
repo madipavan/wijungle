@@ -43,7 +43,9 @@ class DrawerColumn extends StatelessWidget {
               ),
               Text(
                 "Analytics",
-                style: TextStyle(fontSize: ScreenSize.width * 0.015),
+                style: TextStyle(
+                    fontSize: ScreenSize.width * 0.015,
+                    fontWeight: FontWeight.w500),
               )
             ],
           ),
@@ -69,6 +71,7 @@ class DrawerColumn extends StatelessWidget {
                 "Feedback",
                 style: TextStyle(
                     fontSize: ScreenSize.width * 0.015,
+                    fontWeight: FontWeight.w500,
                     color: Colorpallete.ScaffoldBg),
               )
             ],

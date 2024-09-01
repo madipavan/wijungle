@@ -48,7 +48,9 @@ class _HomedrawerColumnState extends State<HomedrawerColumn> {
             children: [
               Text(
                 "Analytics",
-                style: TextStyle(fontSize: ScreenSize.width * 0.02),
+                style: TextStyle(
+                    fontSize: ScreenSize.width * 0.02,
+                    fontWeight: FontWeight.w500),
               ),
               SizedBox(
                 height: ScreenSize.height * 0.08,
